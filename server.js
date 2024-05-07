@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 
 // Set up storage for uploaded files
-const storage = multer.diskStorage({``
+const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "public/uploads/"); // Destination folder for uploads
   },
