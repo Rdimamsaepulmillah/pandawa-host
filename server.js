@@ -38,6 +38,10 @@ app.post("/upload", upload.single("file"), (req, res) => {
   res.json({ url: fileUrl, filename: req.file.filename });
 });
 
+app.get("/", (req, res) => {
+  res.send("hello world!");
+});
+
 // Serve static files from the 'uploads' directory
 app.use(
   "/public/uploads",
